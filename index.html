@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Campus Map Idea</title>
+    <meta   charset = "utf-8">
+    <meta   name = "Version" content = "Campus Map by BSCS2A-Jasper Ryan M. Tayo">
+    <meta   name = "Description" content = "A Virtual Map inside Northwestern University">
+    <script src = "https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-entity
+        geometry = "primitive: box; height: .5; width: 30; depth: 17.5"
+        material = "shader: standard; color: #408e9f"
+        position = "0 -6.5 0">
+      </a-entity>
+      <a-entity
+        geometry = "primitive: plane; height: 1000; width: 1000"
+        rotation = "-90 0 0"
+        position = "0 -.5 0"
+        material = "shader: flat; color: #123456">
+      </a-entity>
+
+      <a-asset>
+          <!-- Room Floor -->
+          <a-mixin
+            id = "floor"
+            geometry = "primitive: box; height: .5; width: 30; depth: 17.5"
+            material = "shader: standard; color: #408e9f"
+            position = "0 -6.5 0">
+          </a-mixin>
+
+          <!-- Hallways -->
+          <a-mixin
+            id = "hallwayFloor"
+            geometry = "primitive: box; height: .5; width: 30; depth: 7.5"
+            material = "shader: standard; color: #408e9f"
+            position = "0 -6.5 12.5">
+          </a-mixin>
+
+          <!-- Half Wall -->
+          <a-mixin
+            id = "semiWall"
+            geometry = "primitive: box; height: 5.5; width: 30; depth: .5"
+            material = "shader: standard; color: #3273b1"
+            position = "0 -4 16">
+          </a-mixin>
+
+          <!-- Hollow Room -->
+          <a-mixin
+            id = "room"
+            geometry = "primitive: box; height: 12.5; width: 30; depth: 17.5"
+            material = "shader: standard; color: #4ab2c9">
+            </a-mixin>
+
+          <!-- Hollow Room -->
+          <a-mixin
+            id = "h-room"
+            geometry = "primitive: box; height: 12.5; width: 30; depth: 17.5"
+            material = "visible: false">
+            
+            </a-mixin>
+      </a-asset>
+
+      <!--a-entity mixin = "floor" position = "0 0 0"></a-entity-->
+
+    <!-- CAS -->
+      <!-- First Floor -->
+
+      <!-- Front Rooms -->
+      <a-entity scale = ".05 .05 .05">
+        <a-entity mixin = "room" position = "-45 5 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-75 5 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-105 5 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-135 5 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "45 5 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "75 5 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "105 5 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "135 5 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+
+        <!-- Second Rooms -->
+        <a-entity mixin = "room" position = "-45 5 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-75 5 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-105 5 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-135 5 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "45 5 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "75 5 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "105 5 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "135 5 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+
+        <!-- Second Floor -->
+
+        <!-- First Rooms -->
+        <a-entity mixin = "room" position = "-45 18 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-75 18 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-105 18 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-135 18 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "45 18 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "75 18 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "105 18 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "135 18 -20">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "semiWall"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+
+        <!-- Second Rooms -->
+        <a-entity mixin = "room" position = "-45 18 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-75 18 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-105 18 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "-135 18 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "45 18 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "75 18 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "105 18 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+        <a-entity mixin = "room" position = "135 18 -45">
+          <a-entity mixin = "floor"></a-entity>
+          <a-entity mixin = "hallwayFloor"></a-entity></a-entity>
+      </a-entity>
+
+      <a-camera position="0 20 20"></a-camera>
+    </a-scene>
+  </body>
+</html>
